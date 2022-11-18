@@ -14,7 +14,9 @@ public class WordRepetitionMapCreator {
         List<String> list = Arrays.asList(sentence.split(" "));
         for (String s : list) {
             s = s.trim();
-            if (!map.containsKey(s)) {
+            if (s.equals("")) {
+                return map;
+            } else if (!map.containsKey(s)) {
                 map.put(s, 1);
             } else {
                 map.put(s, map.get(s) + 1);
