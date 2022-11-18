@@ -9,8 +9,8 @@ public class WordRepetitionMapCreator {
     public Map<String, Integer> createWordRepetitionMap(String sentence) {
         Map<String, Integer> map = new HashMap<>();
         sentence = sentence.toLowerCase();
-        sentence = sentence.replaceAll(",", "");
-        sentence = sentence.replaceAll("\\.", "");
+        sentence = sentence.replace(",", "");
+        sentence = sentence.replace(".", "");
         List<String> list = Arrays.asList(sentence.split(" "));
         for (String s : list) {
             s = s.trim();
